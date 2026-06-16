@@ -179,7 +179,7 @@ git commit -m "✨ mejora en pipeline"
 <img width="120" src="https://github.com/isairey.png" style="border-radius:50%" />
 
 ## Isai Reyes — AI & Full Stack Developer
-
+ 
 </div>
 
 ---
