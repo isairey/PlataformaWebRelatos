@@ -1,35 +1,81 @@
 # 📚 CuentaCuentos – AI Story Generator
-![workflow](https://drive.google.com/uc?export=view&id=1uW7FzV1xtDIVCjJkrh8uHWEIgqb-O63H)
-**CuentaCuentos** es un pipeline de generación y validación de relatos breves mediante IA.  
-El sistema recibe parámetros (nombre del relato, tema, tamaño,...) y genera automáticamente varias versiones de un texto, las valida, selecciona la mejor y crea una imagen representativa.
+
+<div align="center">
+
+<img width="200" src="https://cdn-icons-png.flaticon.com/512/3771/3771518.png" />
+
+### Plataforma de generación inteligente de relatos con IA 🚀
+
+<p align="center">
+  <b>CuentaCuentos</b> es un pipeline de inteligencia artificial que genera, valida y selecciona relatos breves automáticamente, creando también una imagen representativa basada en el texto final.
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-IA-blue?style=for-the-badge&logo=python">
+  <img src="https://img.shields.io/badge/OpenAI-Text%20Generation-black?style=for-the-badge">
+  <img src="https://img.shields.io/badge/Streamlit-App-red?style=for-the-badge">
+  <img src="https://img.shields.io/badge/AI-Pipeline-green?style=for-the-badge">
+</p>
+
+<p align="center">
+  <a href="#-flujo-de-trabajo">Flujo</a> •
+  <a href="#-tecnologías-sugeridas">Tecnologías</a> •
+  <a href="#-estructura">Estructura</a> •
+  <a href="#-cómo-funciona">Ejecución</a>
+</p>
+
+</div>
 
 ---
 
-## 🧩 Flujo de trabajo
+# 🌌 Acerca de CuentaCuentos
 
-1. **Receive Input (JSON)** → se definen parámetros: nombre, tamaño, tema.  
-2. **Processing Data** → validación de parámetros y limpieza.  
-3. **Create Prompt** → construcción del prompt para generación de textos.  
-4. **Generate 5 Texts** → se generan 5 versiones del relato.  
-5. **Validate Form** → control de formato (longitud, estructura).  
-6. **Validate Content** → detección de coherencia y tono.  
-7. **Best Selection** → elección del relato más coherente.  
-8. **Generate Image** → creación de imagen basada en el relato.  
-9. **Export and Save** → exportación del resultado final.
+**CuentaCuentos** es un sistema automatizado de generación de historias mediante inteligencia artificial.
 
----
+El sistema recibe parámetros como tema, nombre y longitud del relato, y ejecuta un pipeline completo que:
 
-## 🛠️ Tecnologías sugeridas
-- **Python 3.10+**
-- `openai` o `transformers` (para generación de texto)
-- `pydantic` (para validación)
-- `Pillow` o `stable-diffusion` API (para imágenes)
-- `pytest` (para testing)
-- `json` / `yaml` (para entrada y salida de datos)
+- Genera múltiples versiones del mismo relato
+- Valida coherencia, formato y calidad
+- Selecciona la mejor historia
+- Genera una imagen representativa
+- Exporta el resultado final
 
 ---
 
-## Estructura
+# 🧩 Flujo de trabajo
+
+## 🔄 Pipeline de generación
+
+- 📥 Recepción de datos (JSON de entrada)
+- 🧹 Procesamiento y validación de parámetros
+- ✍️ Creación de prompt optimizado
+- 🤖 Generación de 5 relatos con IA
+- ✅ Validación de formato
+- 🧠 Evaluación de coherencia
+- 🏆 Selección del mejor relato
+- 🎨 Generación de imagen ilustrativa
+- 📦 Exportación final del resultado
+
+---
+
+# 🛠️ Tecnologías utilizadas
+
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=python" />
+</p>
+
+- Python 3.10+
+- OpenAI API / Transformers
+- Pydantic (validación de datos)
+- Pillow / Stable Diffusion (generación de imágenes)
+- Pytest (testing)
+- JSON / YAML (manejo de datos)
+- Streamlit (interfaz opcional)
+
+---
+
+# 📂 Estructura del proyecto
+
 ```bash
 CuentaCuentos/
 │
@@ -44,47 +90,100 @@ CuentaCuentos/
 ├── tests/
 │   ├── test_prompt_generator.py
 │   ├── test_text_validator.py
-│   └── ...
 │
 ├── assets/
 │   └── diagrams/
-│       └── Order_Processing.png
+│       └── workflow.png
 │
-├── README.md
 ├── requirements.txt
-├── .gitignore
+├── README.md
+└── .gitignore
 ```
 
-# 📈 Cómo funciona
+---
+
+# ⚡ Cómo ejecutar el proyecto
+
+## 1️⃣ Crear entorno virtual
 ```bash
-# Crear entorno virtual
 python -m venv venv
-source venv/bin/activate      # En Windows: venv\Scripts\activate
+source venv/bin/activate
+# Windows: venv\Scripts\activate
+```
 
-# Instalar dependencias
+## 2️⃣ Instalar dependencias
+```bash
 pip install -r requirements.txt
+```
 
-# Ejecutar la app
+## 3️⃣ Ejecutar la aplicación
+```bash
 streamlit run src/main.py
 ```
 
 ---
 
-## 🧠 Este repositorio muestra:
-- Un flujo **bien modularizado**.  
-- Separación clara entre procesamiento, validación, y generación.  
-- Uso de **nombres semánticos y estructurados**.  
-- Un README explicativo que documenta elrazonamiento.  
-- Posible expansión a IA o automatización (encaja perfecto con el enfoque del reto).
+# 🧠 ¿Qué hace este proyecto?
+
+- 🧩 Pipeline modular de IA
+- ✍️ Generación de texto inteligente
+- 🔍 Validación automática de calidad
+- 🎨 Generación de imágenes
+- ⚙️ Arquitectura escalable
+- 🧪 Preparado para testing
 
 ---
 
-## 🧾 Para completarlo
+# 📈 Estructura lógica del sistema
 
-| Elemento | Qué mostrar | Por qué suma puntos |
-|-----------|--------------|--------------------|
-| `requirements.txt` | Lista exacta de dependencias 
-| `README.md` | Explicación clara, pipeline, y ejecución 
-| `assets/` | Incluye el diagrama
-| `tests/` | Unit tests simples (por ejemplo, validar longitud de texto) 
-| `main.py` | Pipeline central que llama a las demás funciones
+El sistema sigue este flujo:
+
+```
+Input → Processing → Prompt → Generation → Validation → Selection → Image → Export
+```
+
+---
+
+# 🚀 Objetivo del proyecto
+
+Crear un sistema capaz de:
+
+- Automatizar la escritura creativa
+- Evaluar calidad de contenido con IA
+- Generar experiencias visuales
+- Simular un pipeline de producción real de contenido
+
+---
+
+# 🤝 Contribuciones
+
+Las contribuciones son bienvenidas ❤️
+
+1. Fork del repositorio
+2. Crear rama
+```bash
+git checkout -b feature/nueva-funcion
+```
+3. Commit de cambios
+```bash
+git commit -m "✨ mejora en pipeline"
+```
+4. Pull Request 🚀
+
+---
+
+# 👨‍💻 Autor
+
+<div align="center">
+
+<img width="120" src="https://github.com/isairey.png" style="border-radius:50%" />
+
+## Isai Reyes — AI & Full Stack Developer
+
+</div>
+
+---
+
+# 🌟 Proyecto de IA Creativa
+
+Sistema diseñado para explorar el potencial de la inteligencia artificial en la generación automática de contenido narrativo y visual.
