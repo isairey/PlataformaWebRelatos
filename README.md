@@ -77,7 +77,7 @@ El sistema recibe parámetros como tema, nombre y longitud del relato, y ejecuta
 # 📂 Estructura del proyecto
 
 ```bash
-CuentaCuentos/
+PlataformaWebRelatos/
 │
 ├── src/
 │   ├── main.py
